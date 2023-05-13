@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 
 
 function MovieItem(props) {
-    
+
+    const dispatch = useDispatch();
     const history = useHistory();
     const [ movieId, setMovieId ] = useState('');
 
@@ -12,8 +14,10 @@ function MovieItem(props) {
 
     const handleClick = (movie) => {
         console.log('clicked', props.id);
-        
-        
+        dispatch({
+            type: 'DETAILS_PAGE',
+            payload: props.id
+        })
         history.push('/details')
     }
 
