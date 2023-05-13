@@ -23,7 +23,9 @@ function MovieList() {
                         <MovieItem 
                         id={movie.id} 
                         title = {movie.title}  
-                        poster = {movie.poster}                    
+                        poster = {movie.poster}
+                        description = {movie.description}  
+                                          
                         />
                     );
                 })}

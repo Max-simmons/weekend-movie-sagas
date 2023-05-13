@@ -1,4 +1,7 @@
 import { useHistory } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
+
 
 function DetailsPage() {
     const history = useHistory();

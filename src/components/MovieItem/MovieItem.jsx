@@ -16,7 +16,10 @@ function MovieItem(props) {
         console.log('clicked', props.id);
         dispatch({
             type: 'DETAILS_PAGE',
-            payload: props.id
+            payload: {'id': props.id, 
+                'title': props.title, 
+                'poster': props.poster, 
+                'description': props.description}
         })
         history.push('/details')
     }
