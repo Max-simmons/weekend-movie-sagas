@@ -14,7 +14,7 @@ import axios from 'axios';
 // Create the rootSaga generator function
 function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchAllMovies);
-    yield takeLatest('FETCH_GENRES_ID', fetchTheGenres);
+    yield takeEvery('FETCH_GENRES', fetchTheGenres);
 }
 
 function* fetchAllMovies() {
@@ -35,13 +35,10 @@ function* fetchTheGenres() {
     try {
         const response = yield axios ({
             method: 'GET',
-            url: '/genre.router.js',
-            params: {
-                genre: action.payload
-            }
+            url: '/api/genre',
         })
         yield put({
-            type: 'SET GENRES',
+            type: 'SET_GENRES',
             payload: response.data
         })
     } catch {
