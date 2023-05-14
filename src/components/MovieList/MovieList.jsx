@@ -16,7 +16,10 @@ function MovieList() {
 
     return (
         <main>
-            <h1>MovieList</h1>
+            <div className='movieList'>
+            <img className = 'popcorn' src='/images/popcorndude.jpeg' alt= "popcorn person"/>
+            <h1 className= 'heading'>Movie List</h1>
+            </div>
             <section className="movies">
                 {movies.map(movie => {
                     return (

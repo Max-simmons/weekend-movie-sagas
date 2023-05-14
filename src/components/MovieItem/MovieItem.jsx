@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import './MovieItem.css'
 
 
 
@@ -26,9 +27,11 @@ function MovieItem(props) {
 
     return(
         
-        <div key={props.id} onClick={handleClick}>
+        <div className= "movieCard" key={props.id} onClick={handleClick}>
+             <img src={props.poster} alt={props.title}/>
+             <div class="container">
              <h3>{props.title}</h3>
-            <img src={props.poster} alt={props.title}/>
+             </div>
         </div>
         
     )
