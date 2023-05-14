@@ -6,6 +6,7 @@
     padding: 15px; 
     margin: auto;
     background: radial-gradient(circle, rgba(240,240,240,1) 0%, rgba(252,19,19,1) 21%, rgba(255,255,255,1) 64%);
+    color: black;
     
   }
     
@@ -26,6 +27,10 @@
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 25px;
+    background-color: white;
+    color:black;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   
   .popcorn {

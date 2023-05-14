@@ -1,5 +1,6 @@
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import './Details.css'
 
 function DetailsPage() {
     const history = useHistory();
@@ -31,11 +32,12 @@ console.log('genres', genres);
     }
     return (
         <>
+        
         <h2>{currentMovie.title}</h2>
-        <img src={currentMovie.poster} alt={currentMovie.title}/>
-        <h1>{genres.join(', ')}</h1>
+        <img className = 'detailsImg' src={currentMovie.poster} alt={currentMovie.title}/>
+        <h1 className='genres'>{genres.join(', ')}</h1>
         <p>{currentMovie.description}</p>
-        <button onClick = {backToHome} >Back to Home</button>
+        <button className='homeButton' onClick = {backToHome} >Back to Home</button>
         </>
     );
 }
