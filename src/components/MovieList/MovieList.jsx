@@ -13,6 +13,7 @@ function MovieList() {
         dispatch({ type: 'FETCH_GENRES'})
     }, []);
 
+    // called the store for the genres and the movie details 
 
     return (
         <main>

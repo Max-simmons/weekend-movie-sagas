@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import './MovieItem.css'
 
-
+// This function will be responsible for displaying the movie items
 
 function MovieItem(props) {
 
@@ -12,6 +12,7 @@ function MovieItem(props) {
     const [ movieId, setMovieId ] = useState('');
 
     // console.log(props.title);
+// onClick the dispatch will send the current movie details selected to the redux store
 
     const handleClick = (movie) => {
         console.log('clicked', props.id);

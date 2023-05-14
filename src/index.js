@@ -30,6 +30,8 @@ function* fetchAllMovies() {
         
 }
 
+// this saga function allows us to get all the genres from the database
+
 function* fetchTheGenres() {
 
     try {
@@ -51,6 +53,8 @@ function* fetchTheGenres() {
 const sagaMiddleware = createSagaMiddleware();
 
 // Used to store movies returned from the server
+
+// this reducer stores the data of the movie that the user clicks on 
 
 const detailsReducer = (state = [], action) => {
     switch (action.type) {
